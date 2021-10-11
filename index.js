@@ -8,13 +8,13 @@ console.log(chalk.bold.magenta.bgWhite("Welcome "+username+" Get Ready to take a
 function play(question,answer) {
   var userAnswer = readlineSync.question(chalk.cyan(question));
   if (userAnswer===answer) {
-    console.log(chalk.cyan.bgGreen.bold("You are right!"))
+    console.log(chalk.green.bgBlack.bold("You are right!"))
     score+=1
   } else {
-    console.log(chalk.black.bgRed.bold("You are wrong!"))
+    console.log(chalk.red.bgBlack.bold("You are wrong!"))
   }
   console.log(chalk.red("-----------------"))
-  console.log(chalk.blue.bgYellow("Your Score is:"+" "+score))
+  console.log(chalk.yellow.bgBlack("Your Score is:"+" "+score))
   console.log(chalk.red("-----------------"))
 }
 
@@ -30,6 +30,14 @@ var questions = [
   {
     question: "What does Kevin suggest Dwight put in his gun holster?\na.)A cell phone\nb.)A banana\nc.)A toy gun\n",
     answer: "b"
+  },
+  {
+    question: "A foreign exchange student lived with Michael when he was young. What did the foreign exchange student take from Michael back to what was formerly Yugoslavia?\na. All of his jeans.\nb. All of his shorts.\nc. All of his shoes",
+    answer: "a"
+  },
+  {
+    question: "What does Michael ask Pam to spread on his foot that he burned on a George Foreman grill?\a. Butter\b. Jam\c. Sauce",
+    answer: "a"
   }
 ]
 
